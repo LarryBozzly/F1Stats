@@ -1,0 +1,56 @@
+<div class="results">
+  <div class="frame">
+    <div class="dropdown">
+      <button (click)="changeOpen()" class="dropbtn">
+        Year
+        <div class="down"></div>
+      </button>
+      <div class="{{ menu }}">
+        <div *ngFor="let y of year">
+          <div (click)="getYear(y)" class="Year">{{ y }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="{{ displayfirst }}">
+      <ng-container>
+        <tr class="board-table">
+          <th class="board-collumn" scope="col">Date</th>
+          <th class="board-collumn" scope="col">Racename</th>
+          <th class="board-collumn" scope="col">Time</th>
+          <th class="board-collumn" scope="col">Country</th>
+          <th class="board-collumn" scope="col">City</th>
+        </tr>
+        <tr class="board-table" *ngFor="let d of data">
+          <td (click)="getDate(d)" class="board-collumn">{{ d.date }}</td>
+          <td (click)="getDate(d)" class="board-collumn">{{ d.raceName }}</td>
+          <td (click)="getDate(d)" class="board-collumn">{{ d.time }}</td>
+          <td (click)="getDate(d)" class="board-collumn">
+            {{ d.Circuit.Location.country }}
+          </td>
+          <td (click)="getDate(d)" class="board-collumn">
+            {{ d.Circuit.Location.locality }}
+          </td>
+        </tr>
+      </ng-container>
+    </div>
+    <div id="1" class="{{ display }}">
+      <ng-container>
+        <div class="Round-Header">Round:{{ displayedRound }}</div>
+        <tr class="board-table">
+          <th class="board-collumn" scope="col">Position</th>
+          <th class="board-collumn" scope="col">Points</th>
+          <th class="board-collumn" scope="col">Name</th>
+          <th class="board-collumn" scope="col">Constructor</th>
+        </tr>
+        <tr class="board-table" *ngFor="let r of results">
+          <td class="board-collumn">{{ r.position }}</td>
+          <td class="board-collumn">{{ r.points }}</td>
+          <td class="board-collumn">
+            {{ r.Driver.familyName + " " + r.Driver.givenName }}
+          </td>
+          <td class="board-collumn">{{ r.Constructor.name }}</td>
+        </tr>
+      </ng-container>
+    </div>
+  </div>
+</div>

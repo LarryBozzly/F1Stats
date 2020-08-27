@@ -1,0 +1,33 @@
+<div class="winner">
+  <div class="frame">
+    <div class="dropdown">
+      <button (click)="changeOpen()" class="dropbtn">
+        Year
+        <div class="down"></div>
+      </button>
+      <div class="{{ menu }}">
+        <div *ngFor="let y of year">
+          <div (click)="getYear(y)" class="Year">{{ y }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="{{ displayfirst }}">
+      <ng-container>
+        <tr class="board-table">
+          <th class="board-collumn" scope="col">Position</th>
+          <th class="board-collumn" scope="col">Points</th>
+          <th class="board-collumn" scope="col">DriverName</th>
+          <th class="board-collumn" scope="col">Constructor</th>
+        </tr>
+        <tr class="board-table" *ngFor="let d of data">
+          <td class="board-collumn">{{ d.position }}</td>
+          <td class="board-collumn">{{ d.points }}</td>
+          <td class="board-collumn">
+            {{ d.Driver.familyName + " " + d.Driver.givenName }}
+          </td>
+          <td class="board-collumn">{{ d.Constructors[0].name }}</td>
+        </tr>
+      </ng-container>
+    </div>
+  </div>
+</div>

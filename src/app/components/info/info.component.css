@@ -1,0 +1,125 @@
+.Info{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    overflow: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.frame{
+    display: flex;
+    flex-direction: column; 
+    margin: 10%;
+    padding: 5%;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 700px;
+    min-width: 260px;
+    align-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    color: white;
+    box-shadow: 1px 2px 4px #000000;
+    text-shadow:1px 2px 4px #000000;
+    border-radius: 5px; 
+    
+    animation-name: showanim;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+   
+    /* overflow: hidden;
+    position: relative;
+    height: 75vh; */
+    
+    
+}
+@keyframes showanim{
+  0%{
+    margin-top: -20%;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.3;
+  }
+ 
+}
+@media screen and (min-width: 800px) {
+    .frame{
+        margin: 5%;
+        
+    }
+  }
+  .Form-Container{
+      box-sizing: border-box;
+      width: 100%;
+      color: black;
+      text-shadow: none;
+      
+  }
+
+  .Form-Subject{
+      width: 100%;
+      text-align: left;
+      font-size: 1.3em;
+      margin-bottom: 1%;
+    
+  }
+  .Form-Subject-Input{
+    
+    width: 100%;
+    padding: 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px #b1b1b1;
+    box-sizing: border-box;
+    resize: none;
+
+  }
+
+  .Forms-Message{
+    width: 100%;
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 1%;
+  
+}
+.Form-Message-Input{
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 300px;
+    box-shadow: 1px 2px 4px #b1b1b1;
+    box-sizing: border-box;
+    resize: none;
+
+}
+.Forms-Drivers{
+    width: 100%;
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 1%;
+}
+.Form-Drivers-Select{
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 1px 2px 4px #b1b1b1;
+    border-radius: 4px;
+}
+.Form-Submit{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e10600;
+    cursor: pointer;
+    border: none;
+    color: white;
+    box-shadow: 1px 2px 4px #b1b1b1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 3vh;
+
+}

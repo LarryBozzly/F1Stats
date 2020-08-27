@@ -1,0 +1,36 @@
+<div class="Info">
+  <div class="frame">
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="contactForm"
+      class="Form-Container"
+    >
+      <div class="Form-Subject">
+        <label class="label">Subject</label>
+        <input
+          formControlName="subject"
+          class="Form-Subject-Input"
+          type="text"
+          placeholder="Subject here.."
+        />
+      </div>
+      <div class="Forms-Message">
+        <label class="label">Message</label>
+        <textarea
+          formControlName="message"
+          class="Form-Message-Input"
+          placeholder="Type your message here.."
+        ></textarea>
+      </div>
+      <div class="Forms-Drivers">
+        <label class="label">Drivers</label>
+        <select formControlName="driversname" class="Form-Drivers-Select">
+          <option *ngFor="let d of data">
+            {{ d.familyName + " " + d.givenName }}
+          </option>
+        </select>
+      </div>
+      <button type="submit" class="Form-Submit">Send</button>
+    </form>
+  </div>
+</div>
